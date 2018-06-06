@@ -1,3 +1,8 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.kyoya\.tech$
+RewriteRule ^(.*)$ http://kyoya.tech/$1 [R=301,L]
+
 RewriteEngine on
 RewriteCond %{THE_REQUEST} ^.*/index.html
 RewriteRule ^(.*)index.html$ http://www.kyoya.tech/$1 [R=301,L]
